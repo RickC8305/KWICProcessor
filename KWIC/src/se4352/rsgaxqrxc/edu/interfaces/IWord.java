@@ -5,5 +5,7 @@ package se4352.rsgaxqrxc.edu.interfaces;
  *
  */
 public interface IWord {
-
+	public boolean isStopWord();
+	public void print();
+	public String getWord();
 }

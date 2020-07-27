@@ -1,5 +1,6 @@
 package se4352.rsgaxqrxc.edu.kwicprocess;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import se4352.rsgaxqrxc.edu.factory.ProcessFactory;
@@ -16,7 +17,7 @@ import se4352.rsgaxqrxc.edu.interfaces.ISubProcess;
 public class KWICProcess implements IProcess{
 	private List<ILine> lines; 
 	private IProcessFactory factory;
-	private List<ILine> output;
+	
 	
 	/**
 	 * this function takes a list of lines and initializes the process
@@ -36,10 +37,27 @@ public class KWICProcess implements IProcess{
 	public void runProcess() {
 		// TODO Auto-generated method stub
 		ISubProcess processLines = this.factory.getLineProcessor();
-		processLines.RunSubProcess(lines);
-		ISubProcess sortLines = this.factory.getLineSorter();
-		sortLines.RunSubProcess(lines);
-		output = sortLines.getResult();
+		for(ILine line : lines) {
+			List<ILine> pline = new ArrayList<>();
+			pline.add(line);
+			processLines.RunSubProcess(pline);
+			List<ILine> rlines = processLines.getResult();
+			for(ILine oline :rlines)
+			{
+				oline.print();
+			}
+			//ISubProcess sortLines = this.factory.getLineSorter();
+			//sortLines.RunSubProcess(rlines);
+			//List<ILine> output = sortLines.getResult();
+			//for(ILine oline : output)
+			//{
+			//	System.out.println(oline);
+			//}
+
+			
+		}
+			
+		
 	}
 	/**
 	 * this functions gets results from the process
@@ -48,7 +66,7 @@ public class KWICProcess implements IProcess{
 	@Override
 	public List<ILine> getResults() {
 		// TODO Auto-generated method stub
-		return output;
+		return null;
 	}
 
 }

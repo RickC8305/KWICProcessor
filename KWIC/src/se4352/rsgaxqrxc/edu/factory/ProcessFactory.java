@@ -2,7 +2,7 @@ package se4352.rsgaxqrxc.edu.factory;
 /**
  * This file creates process
  */
-import se4352.rsgaxqrxc.edu.helpers.ProcessLines;
+import se4352.rsgaxqrxc.edu.helpers.ProcessLine;
 import se4352.rsgaxqrxc.edu.helpers.SortLines;
 import se4352.rsgaxqrxc.edu.interfaces.IProcess;
 import se4352.rsgaxqrxc.edu.interfaces.IProcessFactory;
@@ -45,7 +45,7 @@ public class ProcessFactory implements IProcessFactory{
 	public ISubProcess getLineProcessor() {
 		// TODO Auto-generated method stub
 		if(ProcessFactory.lineProcessor == null) {
-			ProcessFactory.lineProcessor = new ProcessLines();
+			ProcessFactory.lineProcessor = new ProcessLine();
 		}
 		return ProcessFactory.lineProcessor;
 	}
