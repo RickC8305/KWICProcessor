@@ -53,8 +53,9 @@ public class ProcessLine implements ISubProcess{
 			  sb2.append(" ");
 			  
 			}
-			ILine pline  = new Line(word + sb2.toString()+sb1.toString());
+			ILine pline  = new Line(word.getWord() + sb2.toString()+sb1.toString());
 			output.add(pline);
+			index++;
 			
 		}
 		

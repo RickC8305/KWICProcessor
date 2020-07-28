@@ -59,7 +59,7 @@ public class ProcessFactory implements IProcessFactory{
 		if(ProcessFactory.sortProcessor == null) {
 			ProcessFactory.sortProcessor = new SortLines();
 		}
-		return null;
+		return ProcessFactory.sortProcessor;
 	}
 
 }

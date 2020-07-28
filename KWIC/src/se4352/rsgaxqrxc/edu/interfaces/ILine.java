@@ -11,4 +11,5 @@ public interface ILine {
 	public void tokenize();
 	public void print();
 	public List<IWord> getWords();
+	public String getLine();
 }

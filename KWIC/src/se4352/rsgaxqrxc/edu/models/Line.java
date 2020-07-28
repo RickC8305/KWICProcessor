@@ -36,5 +36,10 @@ public class Line implements ILine {
 		// TODO Auto-generated method stub
 		return this.words;
 	}
+	@Override
+	public String getLine() {
+		// TODO Auto-generated method stub
+		return this.line;
+	}
 
 }

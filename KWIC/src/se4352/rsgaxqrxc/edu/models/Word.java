@@ -8,7 +8,7 @@ import se4352.rsgaxqrxc.edu.interfaces.IWord;
 
 public class Word implements IWord {
 	private String word;
-	private static String [] stopWords = { "an", "the", "of", "in"};
+	private static String [] stopWords = { "a", "an", "the", "of", "in"};
 	private static List<String> stopList = new ArrayList<>(); 
 	private static boolean initialized = false;
 	private static void init()

@@ -46,13 +46,13 @@ public class KWICProcess implements IProcess{
 			{
 				oline.print();
 			}
-			//ISubProcess sortLines = this.factory.getLineSorter();
-			//sortLines.RunSubProcess(rlines);
-			//List<ILine> output = sortLines.getResult();
-			//for(ILine oline : output)
-			//{
-			//	System.out.println(oline);
-			//}
+			ISubProcess sortLines = this.factory.getLineSorter();
+			sortLines.RunSubProcess(rlines);
+			List<ILine> output = sortLines.getResult();
+			for(ILine oline : output)
+			{
+				oline.print();
+			}
 
 			
 		}

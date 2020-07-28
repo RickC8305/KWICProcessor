@@ -4,6 +4,7 @@
 
 package se4352.rsgaxqrxc.edu.helpers;
 
+import java.util.Collections;
 import java.util.List;
 
 import se4352.rsgaxqrxc.edu.interfaces.ILine;
@@ -18,6 +19,7 @@ public class SortLines implements ISubProcess{
 	public void RunSubProcess(List<ILine> lines) {
 		// TODO Auto-generated method stub
 		this.lines = lines;
+		lines.sort(new LineSorter());;
 	}
 	/**
 	 * gets the sorted lines as input
